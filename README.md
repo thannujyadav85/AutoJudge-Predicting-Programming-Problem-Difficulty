@@ -92,6 +92,55 @@ A simple Streamlit-based web interface is provided where users can:
 
 The interface runs locally and does not require authentication or a database.
 
+## Dependencies
+
+The project uses the following Python libraries:
+
+import pandas as pd
+import numpy as np
+import os
+import json
+import re
+import joblib
+import streamlit as st
+import nltk
+import spacy
+from nltk.corpus import stopwords
+from scipy.sparse import hstack
+
+Make sure these dependencies are installed before running the project.
+
+# Project Structure
+
+AutoJudge_OpenProject/
+├── app/
+│   └── AutoJudgeapp.py
+├── data/
+│   └── problems.jsonl
+├── models/
+│   ├── classifier.pkl
+│   ├── label_encoder.pkl
+│   ├── regressor.pkl
+│   └── vectorizer.pkl
+├── src/
+│   ├── preprocess.py
+│   └── train.py
+├── load_data.py
+└── README.md
+
+# Step 1: Load and Inspect the Dataset
+python load_data.py
+
+# Step 2: Run Data Preprocessing
+python src/preprocess.py
+
+# Step 3: Train the Models
+python src/train.py
+
+# Step 4: Run the Web Application
+streamlit run app/AutoJudgeapp.py
+
+
 
 
 # Name: Thannuj Gorla
